@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Paw</string>
+    <string name="pet_list_title">Pet List</string>
+    <string name="fave_list_title">Favorites</string>
+    <string name="donation_title">Donation</string>
+    <string name="communication_nav_menu_title">Communication</string>
+    <string name="aboutUs_title">About Us</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="donation_head">I want to make donation. What can I donate?</string>
+    <string name="donation_body">You can make food donation as many as you want!</string>
+    <string name="howto_head">How can I make food donation?</string>
+    <string name="howto_body">You can buy any dog food and send it to our address.</string>
+    <string name="where_head">Where can I buy dog food?</string>
+    <string name="where_body">You can buy online and send directly to our address too.</string>
+</resources>

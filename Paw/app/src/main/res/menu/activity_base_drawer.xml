@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_pet_list"
+            android:icon="@drawable/dog"
+            android:title="@string/pet_list_title" />
+
+        <item
+            android:id="@+id/nav_fave"
+            android:icon="@drawable/ic_star_white_24dp"
+            android:title="@string/fave_list_title" />
+
+        <item
+            android:id="@+id/nav_donation"
+            android:icon="@drawable/donation"
+            android:title="@string/donation_title" />
+    </group>
+
+    <item android:title="@string/communication_nav_menu_title">
+        <menu>
+            <item
+                android:id="@+id/nav_about_us"
+                android:icon="@drawable/ic_info_outline_white_24dp"
+                android:title="@string/aboutUs_title" />
+        </menu>
+    </item>
+
+</menu>
