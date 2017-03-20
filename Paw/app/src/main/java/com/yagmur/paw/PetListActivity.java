@@ -41,8 +41,7 @@ public class PetListActivity extends BaseActivity {
 
     public void fabSearch(View v) {
         Snackbar.make(v, "Search Dialog is going to be here", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-        Intent intent = new Intent(getApplicationContext(), PetProfileActivity.class);
-        startActivity(intent);
+
     }
 
     // TODO: OnItemClickListener yapilacak :: PetProfile Activitysi olusturulacak.
