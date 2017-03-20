@@ -21,9 +21,12 @@
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 
+    <style name="AppTheme.NoActionBar.Transparent" parent="AppTheme.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
     <style name="TextViewTheme" >
         <item name="android:textSize">16sp</item>
     </style>
-
-
 </resources>
