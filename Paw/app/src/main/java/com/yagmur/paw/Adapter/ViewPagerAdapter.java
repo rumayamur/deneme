@@ -10,9 +10,8 @@ import android.widget.ImageView;
 import com.yagmur.paw.R;
 
 public class ViewPagerAdapter extends PagerAdapter {
-
     Context context;
-    private int[] Images = new int[]{
+    private int[] GalImages = new int[]{
             R.drawable.fifth,
             R.drawable.third,
             R.drawable.sixth
@@ -24,25 +23,28 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return Images.length;
+        return GalImages.length;
     }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view == object;
+        return view == ((ImageView) object);
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         ImageView imageView = new ImageView(context);
-        imageView.setImageResource(Images[position]);
-        container.addView(imageView, 0);
+        int padding = context.getResources().getDimensionPixelSize(R.dimen.activity_horizontal_margin);
+        imageView.setPadding(padding, padding, padding, padding);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        imageView.setImageResource(GalImages[position]);
+        ((ViewPager) container).addView(imageView, 0);
         return imageView;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((ImageView) object);
+        ((ViewPager) container).removeView((ImageView) object);
     }
 }
 
