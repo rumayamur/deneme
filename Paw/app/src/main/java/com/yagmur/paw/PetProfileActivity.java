@@ -22,6 +22,9 @@ public class PetProfileActivity extends AppCompatActivity {
     }
 
     private void Init() {
-
+        ViewPager viewpager = (ViewPager) findViewById(R.id.petPhotoVP);
+        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
+        viewpager.setAdapter(new ViewPagerAdapter(this));
+        indicator.setViewPager(viewpager);
     }
 }
