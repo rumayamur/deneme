@@ -1,5 +1,7 @@
 package com.yagmur.paw.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,27 +9,41 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.yagmur.paw.Model.Dog;
+import com.yagmur.paw.PetProfileActivity;
 import com.yagmur.paw.R;
 
 import java.util.List;
 
-/**
- * Created by Yagmur on 5.2.2017. ""
- */
-
 public class PetListAdapter extends RecyclerView.Adapter<PetListAdapter.MyViewHolder> {
     private List<Dog> dogList;
 
-    static class MyViewHolder extends RecyclerView.ViewHolder {
+    static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView petID;
+        Context context;
         ImageButton likeButton;
 
-        MyViewHolder(View itemView) {
+        MyViewHolder(View itemView, Context c) {
             super(itemView);
+            context = c;
             petID = (TextView) itemView.findViewById(R.id.petId);
             likeButton = (ImageButton) itemView.findViewById(R.id.petLikeButton);
+            itemView.setOnClickListener(this);
+            likeButton.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            //TODO: Switch' e çevir!!
+            //TODO: like buton görevini ekle!
+            if (v.getId() == likeButton.getId()) {
+                Toast.makeText(v.getContext(), "item: " + String.valueOf(getAdapterPosition()), Toast.LENGTH_SHORT).show();
+            } else {
+                Intent intent = new Intent(context, PetProfileActivity.class);
+                context.startActivity(intent);
+            }
         }
     }
 
@@ -38,7 +54,7 @@ public class PetListAdapter extends RecyclerView.Adapter<PetListAdapter.MyViewHo
     @Override
     public PetListAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.petlist_item, parent, false);
-        return new MyViewHolder(itemView);
+        return new MyViewHolder(itemView, parent.getContext());
     }
 
     @Override
