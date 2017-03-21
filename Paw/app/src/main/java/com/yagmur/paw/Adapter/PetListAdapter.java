@@ -36,13 +36,14 @@ public class PetListAdapter extends RecyclerView.Adapter<PetListAdapter.MyViewHo
 
         @Override
         public void onClick(View v) {
-            //TODO: Switch' e çevir!!
             //TODO: like buton görevini ekle!
-            if (v.getId() == likeButton.getId()) {
-                Toast.makeText(v.getContext(), "item: " + String.valueOf(getAdapterPosition()), Toast.LENGTH_SHORT).show();
-            } else {
-                Intent intent = new Intent(context, PetProfileActivity.class);
-                context.startActivity(intent);
+            switch(v.getId()){
+                case R.id.petLikeButton:
+                    Toast.makeText(v.getContext(), "item: " + String.valueOf(getAdapterPosition()), Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                    Intent intent = new Intent(context, PetProfileActivity.class);
+                    context.startActivity(intent);
             }
         }
     }
