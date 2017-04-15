@@ -1,8 +1,8 @@
 package com.yagmur.paw;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -40,21 +40,16 @@ public class PetListActivity extends BaseActivity {
     }
 
     public void fabSearch(View v) {
-        Snackbar.make(v, "Search Dialog is going to be here", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(PetListActivity.this);
+        View mView = getLayoutInflater().inflate(R.layout.dialog_search, null);
+
+        // TODO: 15.4.2017 spinner yapilacak.
+
+        mBuilder.setView(mView);
+        final AlertDialog dialog = mBuilder.create();
+        dialog.show();
 
     }
-
-    // TODO: OnItemClickListener yapilacak :: PetProfile Activitysi olusturulacak.
-//    private void PetListOnItemClick(){
-//        petListRV.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), PetProfileActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
-//    }
 
     private void prepareDogData() {
         dog = new Dog("1000", 2);
