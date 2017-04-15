@@ -1,11 +1,25 @@
 package com.yagmur.paw;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ViewAnimator;
 
 public class AboutUsActivity extends BaseActivity {
+    private EditText phone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        phone = (EditText) findViewById(R.id.phone);
+    }
+
+    public void phoneOnClick(View view) {
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:+" + phone.getText().toString().trim()));
+        startActivity(callIntent);
     }
 
     @Override

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pet_list_title">Köpek Listesi</string>
+    <string name="fave_list_title">Beğendikleriniz</string>
+    <string name="donation_title">Bağış</string>
+    <string name="communication_nav_menu_title">İletişim</string>
+    <string name="aboutUs_title">Hakkımızda</string>
+    <string name="action_settings">Ayarlar</string>
+
+    <!--Bagis sayfasi-->
+    <string name="donation_body">İstediğiniz kadar mama bağışı yapabilirisiniz!</string>
+    <string name="donation_head">Bağış yapmak istiyorum. Ne bağışlayabilirim?</string>
+    <string name="howto_body">Herhangi bir köpek maması alıp adresimize gönderebilirsiniz.</string>
+    <string name="howto_head">Mama bağışı nasıl yapabilirim?</string>
+    <string name="where_body">İnternet aracılığıyla mama satın alıp siparişinizi adresimize yönlendirebilirsiniz.</string>
+    <string name="where_head">Nereden köpek maması alabilirim?</string>
+
+    <!--Hakkimizda sayfasi-->
+    <string name="contact_info">İletişim Bilgileri</string>
+    <string name="shelter_name_hint">Barınak Adı</string>
+    <string name="shelter_name">Aliağa Belediyesi Sokak Hayvanları Rehabilitasyon Merkezi</string>
+    <string name="visit_hours_hint">Ziyaret Saatleri</string>
+    <string name="visit_hours">12:00 – 15:30</string>
+    <string name="address_hint">Adres</string>
+    <string name="address">Çaltıkdere Koyu, Aliağa/İZMİR</string>
+    <string name="phone_hint">Telefon</string>
+    <string name="phone">0 (232) 616 19 80</string>
+    <string name="e_mail_hint">E-mail</string>
+    <string name="e_mail">bilgi@aliaga.bel.tr</string>
+
+    <!--Arama dialogu-->
+    <string name="search">Arama</string>
+    <string name="gender">Cinsiyet: </string>
+    <string name="species">Tür: </string>
+    <string name="age">Yaş:</string>
+
+</resources>
