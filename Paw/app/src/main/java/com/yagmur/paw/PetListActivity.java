@@ -7,6 +7,8 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.yagmur.paw.Adapter.PetListAdapter;
 import com.yagmur.paw.Model.Dog;
@@ -19,6 +21,8 @@ public class PetListActivity extends BaseActivity {
     private List<Dog> dogList = new ArrayList<>();
     private RecyclerView petListRV;
     private PetListAdapter myAdapter;
+    private View alertDialogView;
+    private AlertDialog searchDialog = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +45,33 @@ public class PetListActivity extends BaseActivity {
 
     public void fabSearch(View v) {
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(PetListActivity.this);
-        View mView = getLayoutInflater().inflate(R.layout.dialog_search, null);
+        alertDialogView = getLayoutInflater().inflate(R.layout.dialog_search, null);
+        alertDialogInit();
+        mBuilder.setView(alertDialogView);
+        searchDialog = mBuilder.create();
+        searchDialog.show();
 
-        // TODO: 15.4.2017 spinner yapilacak.
+    }
 
-        mBuilder.setView(mView);
-        final AlertDialog dialog = mBuilder.create();
-        dialog.show();
+    private void alertDialogInit() {
+        Spinner speciesSpinner = (Spinner) alertDialogView.findViewById(R.id.species_spinner);
+        ArrayAdapter<CharSequence> speciesAdapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.species_array, R.layout.spinner_item);
+        speciesAdapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
+        speciesSpinner.setAdapter(speciesAdapter);
 
+        Spinner ageSpinner = (Spinner) alertDialogView.findViewById(R.id.age_spinner);
+        ArrayAdapter<CharSequence> ageAdapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.age_array, R.layout.spinner_item);
+        ageAdapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
+        ageSpinner.setAdapter(ageAdapter);
+    }
+
+    public void searchButtonOnClick(View view) {
+        // TODO: 17.4.2017 Search edilen listeyi döndürecek.
+        Snackbar.make(view, "Search OnClick is going to be here", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+    }
+
+    public void cancelButtonOnClick(View view) {
+        searchDialog.dismiss();
     }
 
     private void prepareDogData() {

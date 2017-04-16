@@ -33,5 +33,11 @@
     <string name="gender">Cinsiyet: </string>
     <string name="species">Tür: </string>
     <string name="age">Yaş:</string>
+    <string name="cancel">İptal</string>
 
+    <string-array name="age_array">
+        <item>Bebek (0–1 yaş)</item>
+        <item>Genç (1–3 yaş)</item>
+        <item>Yetişkin (3–5 yaş)</item>
+    </string-array>
 </resources>
