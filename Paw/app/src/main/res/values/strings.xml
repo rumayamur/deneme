@@ -1,5 +1,9 @@
 <resources>
+    <string name="google_maps_api_key" translatable="false">AIzaSyBGs5dEuqVaZE3MroigNEbXQE6c8nZrcQM</string>
+
     <string name="app_name" translatable="false">Paw</string>
+
+    <!--Nav Drawer-->
     <string name="pet_list_title">Pet List</string>
     <string name="fave_list_title">Favorites</string>
     <string name="donation_title">Donation</string>
@@ -11,6 +15,7 @@
 
     <string name="action_settings">Settings</string>
 
+    <!--Donation-->
     <string name="donation_head">I want to make donation. What can I donate?</string>
     <string name="donation_body">You can make food donation as many as you want!</string>
     <string name="howto_head">How can I make food donation?</string>

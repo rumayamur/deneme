@@ -46,10 +46,10 @@
                     <EditText
                         style="@style/TextViewTheme"
                         android:layout_width="match_parent"
-                        android:clickable="false"
-                        android:focusable="false"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:focusable="false"
                         android:hint="@string/shelter_name_hint"
                         android:paddingTop="10dp"
                         android:text="@string/shelter_name" />
@@ -89,9 +89,9 @@
                         style="@style/TextViewTheme"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
                         android:clickable="false"
                         android:focusable="false"
-                        android:background="@android:color/transparent"
                         android:hint="@string/visit_hours_hint"
                         android:paddingTop="10dp"
                         android:text="@string/visit_hours" />
@@ -127,8 +127,8 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:contentDescription="@string/app_name"
-                android:padding="8dp"
                 android:onClick="phoneOnClick"
+                android:padding="8dp"
                 android:src="@drawable/ic_call_white_24dp"
                 android:tint="@color/colorAccent" />
 
@@ -147,14 +147,14 @@
                         android:id="@+id/phone"
                         style="@style/TextViewTheme"
                         android:layout_width="match_parent"
-                        android:clickable="false"
-                        android:focusable="false"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:focusable="false"
                         android:hint="@string/phone_hint"
+                        android:inputType="phone"
                         android:paddingTop="10dp"
-                        android:text="@string/phone"
-                        android:inputType="phone" />
+                        android:text="@string/phone" />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
@@ -191,15 +191,16 @@
                         style="@style/TextViewTheme"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
                         android:clickable="false"
                         android:focusable="false"
-                        android:background="@android:color/transparent"
                         android:hint="@string/e_mail_hint"
                         android:paddingTop="10dp"
                         android:text="@string/e_mail" />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -239,8 +240,15 @@
                         android:text="@string/address" />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
-
-            <!--Maps fragment koyulacak-->
         </LinearLayout>
+
+        <!--Maps fragment koyulacak-->
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:layout_marginTop="20dp"
+            class="com.yagmur.paw.PawMaps" />
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
