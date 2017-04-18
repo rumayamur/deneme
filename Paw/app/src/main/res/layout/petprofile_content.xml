@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
     <!--ID,name,age,gender-->
@@ -13,13 +14,16 @@
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:src="@drawable/foot_print"
+            android:tint="@color/colorPrimary" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/componentColor"/>
+        android:background="@color/componentColor" />
 
     <!--Breed Information-->
     <LinearLayout
@@ -30,13 +34,16 @@
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:src="@drawable/health"
+            android:tint="@color/colorPrimary" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/componentColor"/>
+        android:background="@color/componentColor" />
 
     <!--Health History-->
     <LinearLayout
@@ -47,6 +54,9 @@
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:src="@drawable/health"
+            android:tint="@color/colorPrimary" />
     </LinearLayout>
 </LinearLayout>

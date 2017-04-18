@@ -18,6 +18,7 @@ public class PawMaps extends SupportMapFragment {
         View layout = super.onCreateView(layoutInflater, viewGroup, savedInstance);
         TouchableWrapper frameLayout = new TouchableWrapper(getActivity());
         frameLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+        assert (layout) != null;
         ((ViewGroup) layout).addView(frameLayout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         return layout;
     }
@@ -26,8 +27,8 @@ public class PawMaps extends SupportMapFragment {
         mListener = listener;
     }
 
-    public interface OnTouchListener {
-        public abstract void onTouch();
+    interface OnTouchListener {
+        void onTouch();
     }
 
     public class TouchableWrapper extends FrameLayout {

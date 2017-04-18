@@ -12,7 +12,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     Context context;
     private int[] Images = new int[]{
-            R.drawable.fifth,
+            R.drawable.image,
             R.drawable.third,
             R.drawable.sixth
     };
