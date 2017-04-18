@@ -43,6 +43,7 @@ public class PetListAdapter extends RecyclerView.Adapter<PetListAdapter.MyViewHo
                     break;
                 default:
                     Intent intent = new Intent(context, PetProfileActivity.class);
+                    intent.putExtra("DogId", petID.getText());
                     context.startActivity(intent);
             }
         }
