@@ -31,8 +31,9 @@ public class PetProfileActivity extends AppCompatActivity {
     }
 
     private void Init() {
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        toolbar.setTitle(getIntent().getExtras().getString("urun", "Ürün"));
+        toolbar.setTitle(getIntent().getExtras().getString("DogId", "Good Dog"));
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left_white_24dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
