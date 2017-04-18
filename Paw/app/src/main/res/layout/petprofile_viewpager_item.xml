@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
-        android:src="@drawable/fifth"
+        android:src="@drawable/image"
         android:contentDescription="@string/app_name"
-        android:scaleType="centerInside" />
+        android:scaleType="centerCrop" />
 </FrameLayout>

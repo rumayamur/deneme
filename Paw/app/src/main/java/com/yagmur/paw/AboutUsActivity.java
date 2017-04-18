@@ -33,14 +33,8 @@ public class AboutUsActivity extends BaseActivity implements OnMapReadyCallback 
 
     private void init() {
         phone = (EditText) findViewById(R.id.phone);
-
-//        MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
-//        mapFragment.getMapAsync(this);
-
         ((PawMaps) getSupportFragmentManager().findFragmentById(R.id.map)).getMapAsync(this);
-
         scrollView = (NestedScrollView) findViewById(R.id.content_base);
-
         ((PawMaps) getSupportFragmentManager().findFragmentById(R.id.map)).setListener(new PawMaps.OnTouchListener() {
             @Override
             public void onTouch() {
