@@ -26,12 +26,11 @@ public class PetProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.petprofile);
+        setContentView(R.layout.petprofile_activity);
         Init();
     }
 
     private void Init() {
-
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(getIntent().getExtras().getString("DogId", "Good Dog"));
         setSupportActionBar(toolbar);
