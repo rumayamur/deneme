@@ -1,5 +1,6 @@
 package com.yagmur.paw;
 
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -75,17 +76,25 @@ public class PetListActivity extends BaseActivity {
     }
 
     private void prepareDogData() {
-        dog = new Dog("1000", 2);
+        dog = new Dog("1000", 2, BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.image));
         dogList.add(dog);
 
-        dog = new Dog("1002", 1);
+        dog = new Dog("1002", 1, BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.image2));
         dogList.add(dog);
 
-        dog = new Dog("1003", 4);
+        dog = new Dog("1003", 4, BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.image3));
         dogList.add(dog);
 
-        dog = new Dog("1004", 6);
+        dog = new Dog("1004", 6, BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.image));
         dogList.add(dog);
+
+        int id = 1005;
+        for (int i = 0; i <= 10; i++) {
+            String idS = String.valueOf(id);
+            dog = new Dog(idS, 6);
+            dogList.add(dog);
+            id++;
+        }
 
         myAdapter.notifyDataSetChanged();
     }

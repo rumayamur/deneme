@@ -24,10 +24,12 @@ public class PetListAdapter extends RecyclerView.Adapter<PetListAdapter.MyViewHo
         TextView petID;
         Context context;
         ImageButton likeButton;
+        ImageView petAvatar;
 
         MyViewHolder(View itemView, Context c) {
             super(itemView);
             context = c;
+            petAvatar = (ImageView) itemView.findViewById(R.id.petAvatar);
             petID = (TextView) itemView.findViewById(R.id.petId);
             likeButton = (ImageButton) itemView.findViewById(R.id.petLikeButton);
             itemView.setOnClickListener(this);
@@ -37,7 +39,7 @@ public class PetListAdapter extends RecyclerView.Adapter<PetListAdapter.MyViewHo
         @Override
         public void onClick(View v) {
             //TODO: like buton görevini ekle!
-            switch(v.getId()){
+            switch (v.getId()) {
                 case R.id.petLikeButton:
                     Toast.makeText(v.getContext(), "item: " + String.valueOf(getAdapterPosition()), Toast.LENGTH_SHORT).show();
                     break;
@@ -63,6 +65,7 @@ public class PetListAdapter extends RecyclerView.Adapter<PetListAdapter.MyViewHo
     public void onBindViewHolder(PetListAdapter.MyViewHolder holder, int position) {
         Dog dog = dogList.get(position);
         holder.petID.setText(dog.getDogID());
+        holder.petAvatar.setImageBitmap(dog.getBitmap());
     }
 
     @Override
