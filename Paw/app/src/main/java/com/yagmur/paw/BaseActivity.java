@@ -78,21 +78,17 @@ public abstract class BaseActivity extends AppCompatActivity implements Navigati
         if (id == R.id.nav_pet_list) {
             Intent intent = new Intent(getApplicationContext(), PetListActivity.class);
             startActivity(intent);
-            finish();
         } else if (id == R.id.nav_fave) {
             Intent intent = new Intent(getApplicationContext(), FavoriteActivity.class);
             startActivity(intent);
-            finish();
             Toast.makeText(getApplicationContext(), "Favorite List", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_donation) {
             Intent intent = new Intent(getApplicationContext(), DonationActivity.class);
             startActivity(intent);
-            finish();
             Toast.makeText(getApplicationContext(), "Donation", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_about_us) {
             Intent intent = new Intent(getApplicationContext(), AboutUsActivity.class);
             startActivity(intent);
-            finish();
             Toast.makeText(getApplicationContext(), "About Us", Toast.LENGTH_SHORT).show();
         }
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
