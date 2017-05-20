@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 
 import com.yagmur.paw.Adapter.ViewPagerAdapter;
 
@@ -22,6 +23,7 @@ import me.relex.circleindicator.CircleIndicator;
 public class PetProfileActivity extends AppCompatActivity {
     private FloatingActionButton likeButton;
     private Toolbar toolbar;
+    private ProgressBar progressBarEgzersizIhtiyaci;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,9 @@ public class PetProfileActivity extends AppCompatActivity {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.TRANSPARENT);
         }
+
+        progressBarEgzersizIhtiyaci = (ProgressBar) findViewById(R.id.progressBarEgzersizIhtiyaci);
+        progressBarEgzersizIhtiyaci.setProgress(50);
 
         //Image View Pager:
         likeButton = (FloatingActionButton) findViewById(R.id.likeButton);

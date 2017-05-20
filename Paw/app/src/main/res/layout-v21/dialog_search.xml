@@ -40,7 +40,6 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
                 android:layout_marginStart="@dimen/activity_vertical_margin"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/male"
@@ -50,14 +49,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
-                android:layout_marginStart="@dimen/activity_vertical_margin" />
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:buttonTint="@color/componentColor" />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
                 android:layout_marginStart="@dimen/activity_vertical_margin"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/female"
@@ -67,9 +65,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
                 android:layout_marginStart="@dimen/activity_vertical_margin"
-                android:background="@android:color/white" />
+                android:background="@android:color/white"
+                android:buttonTint="@color/componentColor" />
         </RadioGroup>
     </LinearLayout>
 
@@ -128,7 +126,6 @@
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/search_button"
             android:layout_toStartOf="@id/search_button"
             android:gravity="end|center_vertical"
             android:onClick="cancelButtonOnClick"
@@ -141,8 +138,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
             android:gravity="end|center_vertical"
             android:onClick="searchButtonOnClick"

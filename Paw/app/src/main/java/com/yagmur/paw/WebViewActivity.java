@@ -1,7 +1,6 @@
 package com.yagmur.paw;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -31,10 +30,12 @@ public class WebViewActivity extends AppCompatActivity {
     // TODO: 19.4.2017 Burasi cok bagimli duzelecek.
     private void Init() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (Objects.equals(getIntent().getExtras().getString("TextId", getResources().getString(R.string.temizmama)), getResources().getString(R.string.temizmama))) {
-            toolbar.setTitle("Temiz Mama");
-        } else {
-            toolbar.setTitle("Mama Sepati");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            if (Objects.equals(getIntent().getExtras().getString("TextId", getResources().getString(R.string.temizmama)), getResources().getString(R.string.temizmama))) {
+                toolbar.setTitle("Temiz Mama");
+            } else {
+                toolbar.setTitle("Mama Sepati");
+            }
         }
         toolbar.setSubtitle(getIntent().getExtras().getString("TextId", getResources().getString(R.string.temizmama)));
         setSupportActionBar(toolbar);
