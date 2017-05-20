@@ -25,11 +25,11 @@
 
     <!--AboutUs-->
     <string name="contact_info">İletişim Bilgileri</string>
-    <string name="shelter_name_hint">Barınak Adı</string>
+    <string name="shelter_name_hint">Shelter Name</string>
     <string name="shelter_name">Aliağa Belediyesi Sokak Hayvanları Rehabilitasyon Merkezi</string>
     <string name="visit_hours_hint">Ziyaret Saatleri</string>
     <string name="visit_hours">12:00 – 15:30</string>
-    <string name="address_hint">Adres</string>
+    <string name="address_hint">Address</string>
     <string name="address">Çaltıkdere Koyu, Aliağa/İZMİR</string>
     <string name="phone_hint">Telefon</string>
     <string name="phone">0 (232) 616 19 80</string>
@@ -51,7 +51,7 @@
     <string name="temizmama">https://www.temizmama.com/</string>
     <string name="mamasepeti">http://www.mamasepeti.com/</string>
 
-    <string-array name="species_array">
+    <string-array name="species_array" translatable="false">
         <item>Affenpinscher</item>
         <item>Afghan Hound</item>
         <item>Airedale Terrier</item>
@@ -114,7 +114,7 @@
         <item>Chinese Crested</item>
         <item>Chinese Shar-Pei</item>
         <item>Chinook</item>
-        <item>Chow  Chow</item>
+        <item>Chow Chow</item>
         <item>Clumber Spaniel</item>
         <item>Cockapoo</item>
         <item>Cocker Spaniel</item>

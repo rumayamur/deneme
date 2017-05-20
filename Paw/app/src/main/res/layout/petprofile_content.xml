@@ -140,6 +140,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -183,27 +184,70 @@
                                 android:background="@android:color/transparent"
                                 android:clickable="false"
                                 android:focusable="false"
-                                android:hint="@string/id"
+                                android:hint="Köpeğin Cinsi:"
                                 android:paddingTop="10dp"
-                                android:text="130315047" />
+                                android:text="Ainu" />
                         </android.support.design.widget.TextInputLayout>
 
-                        <android.support.design.widget.TextInputLayout
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/activity_vertical_margin">
+                            android:layout_marginTop="10dp"
+                            android:text="Egzersiz İhtiyacı" />
 
-                            <EditText
-                                style="@style/TextViewTheme"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@android:color/transparent"
-                                android:clickable="false"
-                                android:focusable="false"
-                                android:hint="@string/name"
-                                android:paddingTop="10dp"
-                                android:text="Oliver" />
-                        </android.support.design.widget.TextInputLayout>
+                        <ProgressBar
+                            android:id="@+id/progressBarEgzersizIhtiyaci"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Enerji Seviyesi" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarEnerjiSeviyesi"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Taranma İhtiyacı" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarTaranmaIhtiyaci"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Eğitilebilirlik" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarEgitilebilirlik"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="1" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -219,33 +263,77 @@
                             android:layout_height="wrap_content">
 
                             <EditText
+                                android:id="@+id/editText"
                                 style="@style/TextViewTheme"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@android:color/transparent"
                                 android:clickable="false"
                                 android:focusable="false"
-                                android:hint="@string/age"
+                                android:hint="Ortalama Ömrü:"
                                 android:paddingTop="10dp"
-                                android:text="1 year old" />
+                                android:text="10-14 yıl" />
                         </android.support.design.widget.TextInputLayout>
 
-                        <android.support.design.widget.TextInputLayout
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/activity_vertical_margin">
+                            android:layout_marginTop="10dp"
+                            android:text="Köpeklerle Dostluk" />
 
-                            <EditText
-                                style="@style/TextViewTheme"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@android:color/transparent"
-                                android:clickable="false"
-                                android:focusable="false"
-                                android:hint="@string/gender"
-                                android:paddingTop="10dp"
-                                android:text="Male" />
-                        </android.support.design.widget.TextInputLayout>
+                        <ProgressBar
+                            android:id="@+id/progressBarKopeklerleDostluk"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Çocuklarla Dostluk" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarCocuklarlaDostluk"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Sıcağa Dayanıklılık" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarSicagaDayaniklilik"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Soğuğa Dayanıklılık" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarSogugaDayaniklilik"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="1" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -293,6 +381,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="0.5"
                         android:orientation="vertical">
 
@@ -311,18 +400,53 @@
                                 android:paddingTop="10dp"
                                 android:text="@string/lorem_ipsum" />
                         </android.support.design.widget.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/activity_vertical_margin"
+                                android:layout_weight="0.5">
+
+                                <EditText
+                                    style="@style/TextViewTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:hint="Aşı Durumu:"
+                                    android:paddingTop="10dp"
+                                    android:text="Var" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/activity_vertical_margin"
+                                android:layout_weight="0.5">
+
+                                <EditText
+                                    style="@style/TextViewTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:hint="Sakatlık Durumu:"
+                                    android:paddingTop="10dp"
+                                    android:text="Yok" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="64dp"
-                android:layout_marginStart="64dp"
-                android:layout_marginTop="5dp"
-                android:background="@color/componentColor" />
         </LinearLayout>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
